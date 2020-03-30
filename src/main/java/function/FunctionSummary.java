@@ -8,7 +8,7 @@ import java.util.function.Function;
 
 /**
  * 可用来代替
- * 逻辑代码中if-else 的方法
+ * 逻辑代码中大量  if-else 的方法
  * <p>
  * <p>
  * 简单好用

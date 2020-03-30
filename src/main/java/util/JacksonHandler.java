@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 序列化的工具类
  */
 public final class JacksonHandler {
 

@@ -154,7 +154,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ReplaceIfElse">
+  <component name="RunManager" selected="Application.FunctionSummary">
+    <configuration name="FunctionSummary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="function.FunctionSummary" />
+      <module name="back" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="function.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReplaceIfElse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="function.ReplaceIfElse" />
       <module name="backup" />
@@ -177,13 +190,6 @@
     </configuration>
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.test" />
-      <module name="backup" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test1" />
       <module name="backup" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -245,11 +251,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FunctionSummary" />
         <item itemvalue="Application.ReplaceIfElse" />
         <item itemvalue="Application.g" />
         <item itemvalue="Application.tt" />
         <item itemvalue="Application.test" />
-        <item itemvalue="Application.test1" />
       </list>
     </recent_temporary>
   </component>
