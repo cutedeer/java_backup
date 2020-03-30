@@ -41,8 +41,18 @@ public class ThreadPool {
     }
 
 
+
+
+
+
+
+
+
+
     /**
-     * 线程池
+     * ExecutorService线程池
+     *
+     *
      */
     public void pool2() {
 
@@ -90,6 +100,12 @@ public class ThreadPool {
     }
 
 
+
+
+
+
+
+
     /**
      * CompletableFuture  异步执行程序
      * <p>
@@ -119,7 +135,6 @@ public class ThreadPool {
         CompletableFuture<Void> future2 = CompletableFuture.supplyAsync(() -> {
             // 拿到所有value2
             return getValue2(100);
-            //消费
         }).thenAccept(x ->
                 // 处理value2
                 x.forEach(y -> y.setSum2(Integer.parseInt(y.getValue2())))
@@ -152,7 +167,7 @@ public class ThreadPool {
     private List<DemoBean> getValue2(int time) {
         List<DemoBean> list = Lists.newArrayList();
         try {
-            for (int i = 1; i < 100; i++) {
+            for (int i = 1; i < time; i++) {
                 Thread.sleep(100);
                 DemoBean demoBean = new DemoBean();
                 demoBean.setValue2(i + "");
@@ -163,6 +178,12 @@ public class ThreadPool {
         }
         return list;
     }
+
+
+
+
+
+
 
 
 }
