@@ -1,8 +1,7 @@
 package commandpattern;
 
 import com.google.common.collect.ImmutableMap;
-import commandpattern.impl.GuWen;
-import commandpattern.impl.ZhuanJia;
+import commandpattern.impl.*;
 
 import java.util.Map;
 
@@ -23,8 +22,8 @@ class g {
 
 
     private final static Map<String, Query> QUERY = ImmutableMap.<String, Query>builder().
-            put("zhuanjia", new ZhuanJia(new Action())).
-            put("guwen", new GuWen(new Action())).build();
+            put("Query1", new Query1(new Action())).
+            put("Query2", new Query2(new Action())).build();
 
 
     private static String query(String key) {
@@ -33,7 +32,7 @@ class g {
     }
 
     public static void main(String[] args) {
-        System.out.println(query("zhuanjia"));
-        System.out.println(query("guwen"));
+        System.out.println(query("Query1"));
+        System.out.println(query("Query2"));
     }
 }

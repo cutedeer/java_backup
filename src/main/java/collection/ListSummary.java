@@ -67,4 +67,17 @@ public class ListSummary {
                     return n;
                 })).values());
     }
+
+
+    public void sort() {
+
+        // 按某字段排序   reversed为倒序
+        list.sort(Comparator.comparing(DemoBean::getValue1).reversed());
+
+        // 先按sum1,再按 sum2 排序   倒序只在最后加reversed方法即可
+        list.sort(Comparator.comparing(DemoBean::getSum1).thenComparing(DemoBean::getSum2));
+
+        // 自定义排序规则
+        list.sort(Comparator.comparing(x -> x.getSum1() + x.getValue1().length()));
+    }
 }

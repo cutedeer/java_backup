@@ -4,20 +4,21 @@ import commandpattern.Action;
 import commandpattern.Query;
 
 /**
- * guwen
+ * 专家
  *
  * @author: shuzhuang.su
- * @create: 2019-10-12 20:55
+ * @create: 2019-10-12 20:48
  **/
-public class GuWen implements Query {
+public class Query2 implements Query {
 
     private Action a;
 
-    public GuWen(Action a) {
+    public Query2(Action a) {
         this.a = a;
     }
+
     @Override
     public String execute(String key) {
-       return a.doQuery1(key);
+        return a.doQuery(key);
     }
 }

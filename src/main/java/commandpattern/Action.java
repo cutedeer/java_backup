@@ -11,11 +11,11 @@ package commandpattern;
 public class Action {
 
     public String doQuery(String key){
-        return "专家"+key;
+        return "Query1"+key;
     }
 
     public String doQuery1(String key){
-       return  "顾问"+key;
+       return  "Query2"+key;
     }
 
 
