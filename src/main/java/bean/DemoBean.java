@@ -15,6 +15,10 @@ public class DemoBean {
 
     private String value3;
 
+    private int sum1;
+
+    private int sum2;
+
     public String getValue1() {
         return value1;
     }
@@ -37,5 +41,21 @@ public class DemoBean {
 
     public void setValue3(String value3) {
         this.value3 = value3;
+    }
+
+    public int getSum1() {
+        return sum1;
+    }
+
+    public void setSum1(int sum1) {
+        this.sum1 = sum1;
+    }
+
+    public int getSum2() {
+        return sum2;
+    }
+
+    public void setSum2(int sum2) {
+        this.sum2 = sum2;
     }
 }
