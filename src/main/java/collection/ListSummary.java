@@ -3,8 +3,11 @@ package collection;
 import bean.DemoBean;
 import com.google.common.collect.Lists;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -23,18 +26,18 @@ public class ListSummary {
         return v1;
     }
 
+    List<DemoBean> list = Lists.newArrayList();
 
     /**
      * 一些collect方法
      */
-    public void  streamSummary(){
-        List<DemoBean> list = Lists.newArrayList();
+    public void streamSummary() {
 
         // 1.分组
         Map<String, List<DemoBean>> collect1 = list.stream().collect(Collectors.groupingBy(DemoBean::getValue1));
 
         // 2.list to map (o,n)->n 存在相同key，用新值覆盖旧值,不传此方法必须保证key唯一，否则抛异常
-        Map<String,String> r = list.stream().collect(Collectors.toMap(DemoBean::getValue1,DemoBean::getValue2,(o, n)->n));
+        Map<String, String> r = list.stream().collect(Collectors.toMap(DemoBean::getValue1, DemoBean::getValue2, (o, n) -> n));
 
         // 3. Function.identity() 表示list中的一个元素本身
         Map<String, DemoBean> collect = list.stream().
@@ -43,6 +46,25 @@ public class ListSummary {
     }
 
 
+    /**
+     * 集合去重
+     */
+    public void distinct() {
 
-//    public
+        // 根据某个字段去除
+        ArrayList<DemoBean> demoBeans = Lists.newArrayList(list.stream().collect(Collectors.toMap(DemoBean::getValue1, Function.identity(), (o, n) -> n)).values());
+
+        // 根据某个字段（Value1）去重，保留某值（sum1）最大的哪个
+        ArrayList<DemoBean> demoBeans1 = Lists.newArrayList(list.stream().collect(Collectors.toMap(DemoBean::getValue1, Function.identity(),
+                BinaryOperator.maxBy(Comparator.comparing(DemoBean::getSum1)))).values());
+
+        // 自定义去重逻辑
+        ArrayList<DemoBean> demoBeans2 = Lists.newArrayList(list.stream().collect(Collectors.toMap(DemoBean::getValue1, Function.identity(),
+                (o, n) -> {
+                    if (o.getValue1().length() > n.getValue1().length()) {
+                        return o;
+                    }
+                    return n;
+                })).values());
+    }
 }
