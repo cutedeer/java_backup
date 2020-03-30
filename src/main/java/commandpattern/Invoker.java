@@ -18,7 +18,7 @@ public class Invoker {
     }
 }
 
-class g {
+class go {
 
 
     private final static Map<String, Query> QUERY = ImmutableMap.<String, Query>builder().

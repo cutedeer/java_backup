@@ -5,7 +5,7 @@ package commandpattern;
 /**
  * 动作
  *
- * @author: shuzhuang.su
+ * @author shuzhuang.su
  * @create: 2019-10-12 20:49
  **/
 public class Action {

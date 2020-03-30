@@ -6,8 +6,8 @@ import commandpattern.Query;
 /**
  * 专家
  *
- * @author: shuzhuang.su
- * @create: 2019-10-12 20:48
+ * @author shuzhuang.su
+ * @date 2019-10-12 20:48
  **/
 public class Query2 implements Query {
 
