@@ -30,10 +30,13 @@ public class ListSummary {
     public void  streamSummary(){
         List<DemoBean> list = Lists.newArrayList();
 
-        // list to map (o,n)->n 存在相同key，用新值覆盖旧值,不传此方法必须保证key唯一，否则抛异常
+        // 1.分组
+        Map<String, List<DemoBean>> collect1 = list.stream().collect(Collectors.groupingBy(DemoBean::getValue1));
+
+        // 2.list to map (o,n)->n 存在相同key，用新值覆盖旧值,不传此方法必须保证key唯一，否则抛异常
         Map<String,String> r = list.stream().collect(Collectors.toMap(DemoBean::getValue1,DemoBean::getValue2,(o, n)->n));
 
-        // Function.identity() 表示list中的一个元素本身
+        // 3. Function.identity() 表示list中的一个元素本身
         Map<String, DemoBean> collect = list.stream().
                 collect(Collectors.toMap(x -> x.getValue1() + x.getValue3(), Function.identity(), (o, n) -> n));
 
