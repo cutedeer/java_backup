@@ -65,7 +65,7 @@ public class FunctionSummary {
 
 
     /**
-     * 无返回值,单参数
+     * 无返回值,双参数
      */
     public Map<String, BiConsumer<String,Param>> iConsumerMap = ImmutableMap.<String, BiConsumer<String,Param>>builder().
             put("1", this::iFunction1).
