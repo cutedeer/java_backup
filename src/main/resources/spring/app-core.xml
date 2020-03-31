@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context 
+			http://www.springframework.org/schema/context/spring-context.xsd"
+       default-lazy-init="false">
+
+    <description>Core</description>
+
+    <!-- 自动搜索非@Controller标注的类，和非拦截器 -->
+    <context:component-scan base-package="com">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <context:annotation-config/>
+
+    <import resource="app-aop.xml"/>
+    <import resource="app-bean.xml"/>
+    <import resource="app-db-master.xml"/>
+
+    <!--验证的-->
+    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
+
+    <!--apache的使用vm的邮箱服务-->
+    <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="resourceLoaderPath" value="classpath:/template/"/>
+        <property name="velocityPropertiesMap">
+            <props>
+                <prop key="input.encoding">utf-8</prop>
+                <prop key="output.encoding">utf-8</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

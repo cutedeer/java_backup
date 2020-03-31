@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/task
+            http://www.springframework.org/schema/task/spring-task.xsd"
+       default-lazy-init="false">
+
+    <description>bean</description>
+
+    <!--激活异步和task的注解-->
+    <task:annotation-driven proxy-target-class="true"/>
+
+    <!--快速线程池-->
+    <task:executor id="quickPoolExecutor" keep-alive="60" pool-size="10-10" queue-capacity="500"
+                   rejection-policy="DISCARD"/>
+    <!--公共慢速线程池-->
+    <task:executor id="commonPoolExecutor" keep-alive="60" pool-size="5-5" queue-capacity="500"
+                   rejection-policy="DISCARD"/>
+
+</beans>

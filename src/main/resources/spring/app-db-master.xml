@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context
+			http://www.springframework.org/schema/context/spring-context.xsd
+            http://www.springframework.org/schema/tx
+            http://www.springframework.org/schema/tx/spring-tx.xsd"
+       default-lazy-init="false">
+
+    <context:annotation-config/>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <import resource="app-db-trade.xml"/>
+    <import resource="app-db-service.xml"/>
+    <import resource="app-db-nbmp.xml"/>
+    <import resource="app-db-productlib.xml"/>
+
+    <!-- main -core-->
+    <bean id="mainDataSource" class="com.alibaba.druid.pool.DruidDataSource"
+          init-method="init" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.urloption}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="initialSize" value="${jdbc.initialPoolSize}"/>
+        <property name="minIdle" value="${jdbc.minPoolSize}"/>
+        <property name="maxActive" value="${jdbc.maxPoolSize}"/>
+        <property name="validationQuery" value="select count(1)"/>
+        <property name="testOnBorrow" value="true"/>
+        <property name="testWhileIdle" value="false"/>
+        <property name="testOnReturn" value="false"/>
+        <property name="connectProperties">
+            <props>
+                <prop key="druid.stat.logSlowSql">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="mainSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="mainDataSource"/>
+        <property name="typeAliasesPackage" value="com.bee.honeycomb.entity.backend"/>
+        <property name="mapperLocations" value="classpath*:mybatis/backend/*.xml"/>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.bee.honeycomb.mapper.backend"/>
+        <property name="sqlSessionFactoryBeanName" value="mainSqlSessionFactory"/>
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="mainDataSource"/>
+    </bean>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <!--如果要用QMQ持久化消息的话,请配置以下-->
+    <bean id="messageProducer" class="qunar.tc.qmq.producer.MessageProducerProvider">
+        <property name="transactionProvider">
+            <bean class="qunar.tc.qmq.producer.tx.SpringTransactionProvider">
+                <constructor-arg index="0" ref="mainDataSource"/>
+            </bean>
+        </property>
+    </bean>
+</beans>
