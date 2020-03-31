@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37b56d3c-0b4d-4fdb-8d87-4223272cae61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources-betamagic/configure.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-betamagic/dubbo.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-betamagic/file/20191107_washNextAppointTime.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-betamagic/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-betamagic/myid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-betamagic/qconfig.profile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-betamagic/qmq.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-betamagic/qschedule.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-dev/bigdata.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-dev/configure.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-dev/dubbo.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-dev/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-dev/qconfig.profile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-dev/qmq.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-dev/qschedule.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-prod/bigdata.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-prod/configure.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-prod/dubbo.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-prod/file/20191107_washNextAppointTime.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-prod/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-prod/qmq.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources-prod/qschedule.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/dubbo/com.alibaba.dubbo.rpc.Filter" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/app-aop.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/app-bean.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/app-core.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/app-db-master.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/servlet-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/app-db-master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/app-db-master.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,13 +19,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/ControllerDemo.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/app-bean.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="309">
+              <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/app-core.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="770">
+              <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -61,50 +39,60 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-291">
-              <caret line="241" column="13" selection-start-line="241" selection-start-column="13" selection-end-line="241" selection-end-column="13" />
+            <state relative-caret-position="369">
+              <caret line="200" selection-start-line="200" selection-end-line="200" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/app-db-master.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources-prod/configure.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources-prod/dubbo.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/spring/app-aop.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/app-bean.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/app-core.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+            <state relative-caret-position="330">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources-betamagic/dubbo.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources-betamagic/logback.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/resources-dev/dubbo.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1757" />
+            <state relative-caret-position="132">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.9.RELEASE/spring-context-4.3.9.RELEASE-sources.jar!/org/springframework/validation/beanvalidation/LocalValidatorFactoryBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="858">
-              <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/main/resources-prod/bigdata.properties">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -162,11 +150,17 @@
         <option value="$PROJECT_DIR$/src/main/java/util/ValidateUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/ControllerDemo.java" />
         <option value="$PROJECT_DIR$/src/main/java/bean/DemoBean.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/app-core.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/README" />
         <option value="$PROJECT_DIR$/src/main/resources-betamagic/dubbo.properties" />
         <option value="$PROJECT_DIR$/src/main/resources-betamagic/bigdata.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources-prod/configure.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources-dev/bigdata.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources-prod/bigdata.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources-prod/dubbo.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources-dev/dubbo.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/app-db-master.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -217,20 +211,6 @@
             </path>
             <path>
               <item name="java_backup" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java_backup" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources-betamagic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="java_backup" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java_backup" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources-dev" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="java_backup" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -246,7 +226,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -435,7 +415,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72341000" />
+    <option name="totallyTimeSpent" value="73358000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="27" width="1850" height="1053" extended-state="6" />
@@ -456,7 +436,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.03329634" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.37957823" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32852387" />
@@ -515,56 +495,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///soft/jdk1.8.0_211/src.zip!/java/util/function/Function.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-          <folding>
-            <element signature="e#2837#2838#0" expanded="true" />
-            <element signature="e#2866#2867#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2006" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10428" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/A.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/bean/A.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-56" />
-      </provider>
-    </entry>
-    <entry file="jar:///soft/jdk1.8.0_211/src.zip!/java/util/concurrent/ExecutorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1501">
-          <caret line="136" column="17" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///soft/jdk1.8.0_211/src.zip!/java/util/Comparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -813,19 +743,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources-dev/myid">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-291">
-          <caret line="241" column="13" selection-start-line="241" selection-start-column="13" selection-end-line="241" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/app-aop.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/app-bean.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/app-db-productlib.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -859,13 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/app-core.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources-betamagic/bigdata.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -878,6 +788,82 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources-betamagic/logback.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1757" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources-prod/file/20191107_washNextAppointTime.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources-dev/configure.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources-dev/bigdata.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources-dev/dubbo.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources-dev/logback.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2442" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="200" selection-start-line="200" selection-end-line="200" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/app-db-master.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/app-core.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/app-bean.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/app-aop.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources-prod/bigdata.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources-prod/dubbo.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/dubbo/com.alibaba.dubbo.rpc.Filter">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources-prod/configure.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
       </provider>
     </entry>
   </component>

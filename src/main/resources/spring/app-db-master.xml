@@ -14,11 +14,6 @@
     <context:annotation-config/>
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
-    <import resource="app-db-trade.xml"/>
-    <import resource="app-db-service.xml"/>
-    <import resource="app-db-nbmp.xml"/>
-    <import resource="app-db-productlib.xml"/>
-
     <!-- main -core-->
     <bean id="mainDataSource" class="com.alibaba.druid.pool.DruidDataSource"
           init-method="init" destroy-method="close">
@@ -56,12 +51,4 @@
     </bean>
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
-    <!--如果要用QMQ持久化消息的话,请配置以下-->
-    <bean id="messageProducer" class="qunar.tc.qmq.producer.MessageProducerProvider">
-        <property name="transactionProvider">
-            <bean class="qunar.tc.qmq.producer.tx.SpringTransactionProvider">
-                <constructor-arg index="0" ref="mainDataSource"/>
-            </bean>
-        </property>
-    </bean>
 </beans>
