@@ -41,18 +41,8 @@ public class ThreadPool {
     }
 
 
-
-
-
-
-
-
-
-
     /**
      * ExecutorService线程池
-     *
-     *
      */
     public void pool2() {
 
@@ -100,12 +90,6 @@ public class ThreadPool {
     }
 
 
-
-
-
-
-
-
     /**
      * CompletableFuture  异步执行程序
      * <p>
@@ -120,12 +104,13 @@ public class ThreadPool {
     public void pool3() {
 
         // 假设获取value1和value2互不影响，且较为耗时，将两部分开来操作
+        List<DemoBean> list = Lists.newArrayListWithCapacity(100);
 
 
         // 流程1
         CompletableFuture<Void> future1 = CompletableFuture.supplyAsync(() -> {
             // 拿到所有value1
-            return getValue1(100);
+            return getValue1(list);
         }).thenAccept(x -> {
             // 处理value1
             x.forEach(y -> y.setSum1(Integer.parseInt(y.getValue1())));
@@ -134,7 +119,7 @@ public class ThreadPool {
         // 流程2
         CompletableFuture<Void> future2 = CompletableFuture.supplyAsync(() -> {
             // 拿到所有value2
-            return getValue2(100);
+            return getValue2(list);
         }).thenAccept(x ->
                 // 处理value2
                 x.forEach(y -> y.setSum2(Integer.parseInt(y.getValue2())))
@@ -149,12 +134,11 @@ public class ThreadPool {
         allJoiner.join();
     }
 
-    private List<DemoBean> getValue1(int time) {
-        List<DemoBean> list = Lists.newArrayList();
+    private List<DemoBean> getValue1(List<DemoBean> list) {
         try {
-            for (int i = 1; i < time; i++) {
-                Thread.sleep(100);
-                DemoBean demoBean = new DemoBean();
+            int i=0;
+            for (DemoBean demoBean:list) {
+                Thread.sleep(10);
                 demoBean.setValue1(i + "");
                 list.add(demoBean);
             }
@@ -164,12 +148,11 @@ public class ThreadPool {
         return list;
     }
 
-    private List<DemoBean> getValue2(int time) {
-        List<DemoBean> list = Lists.newArrayList();
+    private List<DemoBean> getValue2(List<DemoBean> list) {
         try {
-            for (int i = 1; i < time; i++) {
+            int i=0;
+            for (DemoBean demoBean:list) {
                 Thread.sleep(100);
-                DemoBean demoBean = new DemoBean();
                 demoBean.setValue2(i + "");
                 list.add(demoBean);
             }
@@ -178,12 +161,6 @@ public class ThreadPool {
         }
         return list;
     }
-
-
-
-
-
-
 
 
 }
