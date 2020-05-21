@@ -4,7 +4,7 @@ import Adapter.AdapterInter;
 import org.springframework.stereotype.Service;
 
 /**
- * 实现方法1
+ * 实现方法2
  *
  * @author shuzhuang.su
  * @date 2020-03-30 21:49
