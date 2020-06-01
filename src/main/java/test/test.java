@@ -1,9 +1,14 @@
 package test;
 
 import bean.A;
+import bean.DemoBean;
 import com.google.common.collect.*;
+import org.springframework.validation.Errors;
 import util.JacksonHandler;
+import util.ValidateUtil;
 
+
+import org.springframework.validation.Validator;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -87,6 +92,23 @@ public class test {
 
 class tt{
     public static void main(String[] args) {
+
+        DemoBean demoBean = new DemoBean();
+
+        String s = ValidateUtil.validateObject(demoBean, new Validator() {
+            @Override
+            public boolean supports(Class<?> clazz) {
+                return true;
+            }
+
+            @Override
+            public void validate(Object target, Errors errors) {
+
+            }
+        });
+
+        System.out.println(s);
+
 //        differentBetweenMapAndPeek();
 
     }
@@ -156,5 +178,8 @@ class tt{
          System.out.println(ss1);
 
      }
+
+
+
 }
 

@@ -32,6 +32,7 @@ public class DemoBean {
     private int sum2;
 
 
+    @NotBlank.List(@NotBlank(message = "不允许为空"))
     private List<String> list;
 
 
