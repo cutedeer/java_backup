@@ -28,10 +28,12 @@ public class FunctionSummary {
         param.setChooseFunction("2");
         param.setStr("do something");
         // 得到目的函数
-        Function<Param, Integer> paramIntegerFunction = replaceIfElse.functionMap.get(param.chooseFunction);
+        Consumer<Param> paramConsumer = replaceIfElse.consumerMap.get(param.chooseFunction);
+
+        paramConsumer.andThen(x->{
+            System.out.println("xxxx");
+        }).accept(param);
         // 执行函数，得到结果
-        Integer apply = paramIntegerFunction.apply(param);
-        System.out.println(apply);
 
     }
 

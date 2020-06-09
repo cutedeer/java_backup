@@ -291,10 +291,86 @@ public class Solution {
     }
 
 
+    public static String getPermutation(int n, int k) {
+
+        // 1特殊处理
+        if (n == 1) {
+            return "1";
+        }
+
+        int[] nums = new int[n];
+        int[] ints = new int[n];
+        for (int i = 0; i < n; i++) {
+            nums[i] = i + 1;
+        }
+        // 第一个数的位置固定共有(n-1)!个排列情况
+        int factorial = factorial(n - 1);
+        int i = k % factorial;
+        // 第几个数在第一位
+        int index = 0;
+        if (k != 1) {
+            index = k / factorial - 1;
+            index = i == 0 ? index : index + 1;
+        }
+
+        k = i == 0 ? factorial : i;
+
+        ints[index]++;
+        List<List<Integer>> permutes = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
+        list.add(nums[index]);
+        fillResult(ints, nums, nums.length, 1, list, permutes, k);
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Integer integer : permutes.get(k - 1)) {
+            stringBuilder.append(integer);
+        }
+        return stringBuilder.toString();
+    }
+
+    private static int factorial(int n) {
+        if (n == 0) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    }
+
+    /**
+     * 递归装配结果
+     *
+     * @param index  已排列数字的下标
+     * @param nums   数组
+     * @param size   数组大小
+     * @param depth  深度
+     * @param list   上层排列的结果
+     * @param result 最终结果
+     */
+    public static void fillResult(int[] index, int[] nums, int size, int depth, List<Integer> list, List<List<Integer>> result, int k) {
+        depth++;
+        if (depth > size) {
+            return;
+        }
+        if (result.size() == k) {
+            return;
+        }
+        List<Integer> temp = null;
+        for (int i = 0; i < size; i++) {
+            if (index[i] == 0) {
+                temp = new ArrayList<>(list);
+                temp.add(nums[i]);
+                index[i]++;
+                fillResult(index, nums, size, depth, temp, result, k);
+                index[i]--;
+            }
+        }
+        if (depth == size) {
+            result.add(temp);
+        }
+    }
+
     public static void main(String[] args) {
-        int[][] arr = {{1, 2, 10}, {2, 3, 20}, {2, 5, 25}};
-        int[] unsortedSubarray = corpFlightBookings(arr, 5);
-        System.out.println(unsortedSubarray);
+
+//        System.out.println(factorial(3));
+        System.out.println(getPermutation(3, 1));
     }
 
 }

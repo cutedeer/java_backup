@@ -59,10 +59,10 @@ public class ControllerWrapperAspect {
             LOGGER.error("{} recordControllerTrace error {}", methodDesc, keyWords, e);
             if (e instanceof RuntimeException) {
                 LOGGER.error("{} {} biz error", methodDesc, keyWords);
-                result = ResultData.buildBusinessFailure(e.getMessage());
+//                result = ResultData.buildBusinessFailure(e.getMessage());
             } else if (e instanceof Exception) {
                 LOGGER.error("{} {} sys error", methodDesc, keyWords);
-                result = ResultData.builderFailure();
+//                result = ResultData.builderFailure();
             } else {
                 throw e;
             }
